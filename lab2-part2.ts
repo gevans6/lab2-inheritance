@@ -13,11 +13,11 @@ class SavingsAccount {
     }
 
     withdraw(amount:number) {
-        if (this.withdrawlsLeft > 0){
+        if (this.withdrawlsLeft > 0 && this.balance > amount){
             this.balance -= amount;
             this.withdrawlsLeft -= 1;
         } else {
-            console.log("You have exceeded the number of allows withdrawls from your savings account.")
+            console.log("You have exceeded the number of allows withdrawls from your savings account or there is not enough money in the account.");
         }
         
     }

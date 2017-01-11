@@ -12,7 +12,12 @@ class CheckingAccount {
     }
 
     withdraw(amount:number) {
-        this.balance -= amount;
+        if (this.balance > amount) {
+            this.balance -= amount;
+        } else {
+            console.log("Not enough money in account.");
+        }
+        
     }
 
     checkBalance() {
